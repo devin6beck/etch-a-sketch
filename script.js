@@ -16,14 +16,13 @@ topButtonContainer.style.marginBottom = '10px';
 topButtonContainer.appendChild(btnRest).classList.add('btn');
 
 // Start the page off with a 16 by 16 grid.
-createDivs(16, 16);
+start()
 
-grayColor();
-
-
-btnRest.addEventListener('click', reset);
-
-
+function start() {
+  createDivs(16, 16);
+  grayColor();
+  btnRest.addEventListener('click', reset);
+}
 
 // this function created the grid
 function createDivs(col, rows) {

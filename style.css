@@ -21,3 +21,8 @@ section h1 {
   display: grid;
   z-index: 100;
 }
+
+.btn {
+  width: 50px;
+  font-size:medium;
+}
