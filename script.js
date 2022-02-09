@@ -47,7 +47,8 @@ function randomRGB() {
   const boxs = gridContainer.querySelectorAll('.box');
 
   // forEach box add an event listener for 'mouseover' that changes the background
-  // of that box to randome RGB
+  // of that box to randome RGB. Each mouseover after the first mouseover should
+  // makde the box darker until it is completly black.
   boxs.forEach((box) => {
     let x = Math.floor(Math.random() * 256);
     let y = Math.floor(Math.random() * 256);
