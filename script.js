@@ -26,7 +26,7 @@ start()
 // Start the page off with a 16 by 16 grid.
 function start() {
   createDivs(16, 16);
-  grayColor();
+  randomRGB();
   btnRest.addEventListener('click', reset);
 }
 
@@ -40,6 +40,17 @@ function createDivs(col, rows) {
     container.appendChild(div).classList.add('box');
 
   }
+}
+
+function randomRGB() {
+  const boxs = container.querySelectorAll('.box'); 
+  boxs.forEach(box => box.addEventListener('mouseover', () => {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    box.style.background = bgColor;
+  }))
 }
 
 function grayColor() {
