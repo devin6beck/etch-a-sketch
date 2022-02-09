@@ -1,4 +1,4 @@
-.section {
+#mainContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,7 +7,7 @@
   height: 100vh;
 }
 
-section h1 {
+mainContainer h1 {
   position: absolute;
   top: 50px;
   left: 50%;
@@ -22,7 +22,7 @@ section h1 {
   z-index: 100;
 }
 
-.btn {
+.button {
   width: 50px;
   font-size:medium;
 }
