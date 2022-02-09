@@ -24,7 +24,7 @@ start();
 // function that runs when page loads to start the page off with a 16 by 16 grid
 function start() {
   createGrid(16, 16);
-  randomRGB();
+  newGridButton.addEventListener('click', newGrid)
 }
 
 
@@ -38,6 +38,7 @@ function createGrid(columns, rows) {
     gridContainer.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
     gridContainer.appendChild(div).classList.add('box');
   }
+  randomRGB();
 }
 
 function randomRGB() {
@@ -76,6 +77,5 @@ function newGrid() {
     }
     // create new grid and call the randomRGB function
     createGrid(newSize, newSize);
-    randomRGB();
   }
 }
