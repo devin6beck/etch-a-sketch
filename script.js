@@ -31,12 +31,23 @@ function start() {
 }
 
 // this function created the grid
+// function takes two arguments. column and rows
 function createDivs(col, rows) {
+  // for loop that loops while i is < (column * rows)
   for(let i  = 0; i < (col * rows); i++) {
+    // create variable that created a new div element in the document
     const div = document.createElement('div');
+    // add a border to that new div with 1px solid black
     div.style.border = '1px solid black';
+    // style the grid container to gridTemplateColumns = repeate(colmns, 1fr)
+    // columns is the number of time you want to repeate 1fr
     container.style.gridTemplateColumns = `repeat(${col}, 1fr)`;
+    // style the grid container to gridTemplateRows = repeate(rows, 1fr)
+    // rows is the number of time you want to repeate 1fr
     container.style.gridTemplateRows = `repeat(${rows}, 1fr)`;
+
+    // add the new div to the gridContainer.
+    // the new div should have a class of box
     container.appendChild(div).classList.add('box');
 
   }
