@@ -4,7 +4,6 @@ const mainContainer = document.getElementById('mainContainer');
 const topButtonContainer = document.getElementById('topButtonContainer');
 const gridContainer = document.getElementById('gridContainer');
 
-
 // create variables that point to newly created button elements
 const newGridButton = document.createElement('button');
 
@@ -23,13 +22,11 @@ topButtonContainer.appendChild(newGridButton);
 // call the start function which creates a 16 by 16 grid
 start();
 
-
 // function that runs when page loads to start the page off with a 16 by 16 grid
 function start() {
   createGrid(16, 16);
   newGridButton.addEventListener('click', newGrid)
 }
-
 
 // this function created the grid
 function createGrid(columns, rows) {
@@ -65,7 +62,6 @@ function randomRGB() {
     })
   })
 }
-
 
 // function that prompt user for a new grid size and then make a new empty
 // grid from user defnied parameters. 
