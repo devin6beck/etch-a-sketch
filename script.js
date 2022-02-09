@@ -41,7 +41,7 @@ function createDivs(col, rows) {
 
   }
 }
-console.log(box.style.background)
+
 function grayColor() {
   const boxs = container.querySelectorAll('.box'); 
   boxs.forEach(box => box.addEventListener('mouseover', () => {
@@ -80,9 +80,15 @@ function grayColor() {
 
 function reset() {
   let newSize = prompt("How big would you like the grid? Choose 1-100");
-  while (container.firstChild) {
-    container.removeChild(container.lastChild);
+  if (newSize < 1 || newSize > 100) {
+    alert("Please choose a number between 1 and 100. Try again")
+  } else {
+    while (container.firstChild) {
+      container.removeChild(container.lastChild);
+    }
+    createDivs(newSize, newSize);
+    grayColor();
+
   }
-  createDivs(newSize, newSize);
-  grayColor();
+
 }
