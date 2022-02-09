@@ -41,6 +41,7 @@ function createGrid(columns, rows) {
   randomRGB();
 }
 
+// function that changes the background of the boxes in the grid to a random RGB
 function randomRGB() {
   // create variable called boxes that selects everything inside gridContainer
   // that has a class of 'box'
