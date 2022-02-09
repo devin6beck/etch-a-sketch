@@ -8,9 +8,12 @@ const gridContainer = document.getElementById('gridContainer');
 // create variables that point to newly created button elements
 const newGridButton = document.createElement('button');
 
-// put text in the newGridButton
+// put text in the newGridButton and style the newGridButton
 newGridButton.textContent = 'New Grid';
-
+newGridButton.style.background = 'orange';
+newGridButton.style.width = '100px';
+newGridButton.style.fontSize = 'medium';
+newGridButton.style.fontWeight = 'bold';
 
 // add 10px to the bottom margin of the topButtonContainer div and then 
 // add the newGridButton to the topButtonContainer.
@@ -70,7 +73,9 @@ function newGrid() {
   const newSize = prompt('How big would you like the new grid?' +
                         ' New value must be between 1 and 100.');
 
-  if (newSize < 1 || newSize > 100) {
+  // if the newSize the user wants is lower than 1 or greater than 100 or is NOT
+  // a number then alert the user to enter a number between 1 and 100
+  if (newSize < 1 || newSize > 100 || isNaN(newSize)) {
     alert("Value entered must be between 1 and 100. Try again.")
   } else {
     // delete the last grid

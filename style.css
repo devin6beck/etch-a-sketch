@@ -7,22 +7,9 @@
   height: 100vh;
 }
 
-mainContainer h1 {
-  position: absolute;
-  top: 50px;
-  left: 50%;
-  transform:translate(-50%) ;
-  font-size: 4em;
-}
-
 #gridContainer {
   width: 600px;
   height: 600px;
   display: grid;
   z-index: 100;
-}
-
-.button {
-  width: 50px;
-  font-size:medium;
 }
