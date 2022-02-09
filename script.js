@@ -1,8 +1,5 @@
 const container = document.querySelector('.container');
-const btnBlack = document.createElement('button');
 const btnGray = document.createElement('button');
-const btnRGB = document.createElement('button');
-const btnSize = document.createElement('button');
 const btnRest = document.createElement('button');
 
 const topButtonContainer = document.getElementById("topButtonContainer");
@@ -52,4 +49,5 @@ function reset() {
     container.removeChild(container.lastChild);
   }
   createDivs(newSize, newSize);
+  grayColor();
 }
