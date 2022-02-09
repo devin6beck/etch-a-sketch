@@ -23,7 +23,7 @@ topButtonContainer.appendChild(btnRest).classList.add('btn');
 
 start()
 
-// Start the page off with a 16 by 16 grid.
+// function that runs when page loads to start the page off with a 16 by 16 grid
 function start() {
   createDivs(16, 16);
   randomRGB();
@@ -42,6 +42,8 @@ function createDivs(col, rows) {
   }
 }
 
+// function that fills the background of a box within the grid with a random
+// RGB when mouseover. 
 function randomRGB() {
   const boxs = container.querySelectorAll('.box'); 
   boxs.forEach(box => box.addEventListener('mouseover', () => {
@@ -88,7 +90,8 @@ function grayColor() {
 //   buttonsContainer.appendChild(btnGray).classList.add('btn');
 // }
 
-
+// function that prompt user for a new grid size and then make a new empty
+// grid from user defnied parameters. 
 function reset() {
   let newSize = prompt("How big would you like the grid? Choose 1-100");
   if (newSize < 1 || newSize > 100) {
@@ -98,8 +101,6 @@ function reset() {
       container.removeChild(container.lastChild);
     }
     createDivs(newSize, newSize);
-    grayColor();
-
+    randomRGB();
   }
-
 }
