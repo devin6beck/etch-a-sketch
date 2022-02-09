@@ -13,10 +13,11 @@ newGridButton.textContent = 'New Grid';
 
 
 // add 10px to the bottom margin of the topButtonContainer div and then 
-// add the btnRest to the topButtonContainer.
+// add the newGridButton to the topButtonContainer.
 topButtonContainer.style.marginBottom = '10px';
 topButtonContainer.appendChild(newGridButton);
 
+// call the start function which creates a 16 by 16 grid
 start();
 
 
